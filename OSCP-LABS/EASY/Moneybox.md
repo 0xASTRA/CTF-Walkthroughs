@@ -112,8 +112,9 @@ ftp> dir
 226 Directory send OK.
 ```
 // Here I run the command "get" to download the image on my machine on the current directory
-ftp> get trytofind.jpg 
 ```
+ftp> get trytofind.jpg 
+
 local: trytofind.jpg remote: trytofind.jpg
 229 Entering Extended Passive Mode (|||48069|)
 150 Opening BINARY mode data connection for trytofind.jpg (1093656 bytes).
