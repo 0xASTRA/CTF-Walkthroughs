@@ -34,6 +34,14 @@ File found: /store/admin.php - 200
 ```
 -> I noticed it had an /store/admin.php, it requested an login, so I input admin:admin, and I got in.
 -> I go to http://192.168.177.111/store/admin_add.php and try to upload an reverse php shell, first I initiate netcat listening on port 7777.
+```
+┌──(root㉿kali)-[/home/astra]
+└─# nc -lvnp 7777                                    
+listening on [any] 7777 ...
+```
+![Screenshot_3](https://user-images.githubusercontent.com/47869173/220700851-98432f1e-d888-4f75-a197-47a2278cb56e.png)
+![Screenshot_4](https://user-images.githubusercontent.com/47869173/220700840-07a332b5-a4a0-4a83-9f75-9dbddb09ee19.png)
+![image](https://user-images.githubusercontent.com/47869173/220700845-280277f2-3418-4e48-a798-f49c0219998d.png)
 
 -> After uploading the shell, I find it here http://192.168.177.111/store/bootstrap/img, and I click on the shell, andddd, I got access!
 ```
