@@ -103,15 +103,8 @@ hannah@ShellDredd:~$
 ```
 -> I see "cpulimit" and I think we can exploit that, after searching the web for a while I found this
 
-"
-SUID
-If the binary has the SUID bit set, it does not drop the elevated privileges and may be abused to access the file system, escalate or maintain privileged access as a SUID backdoor. If it is used to run sh -p, omit the -p argument on systems like Debian (<= Stretch) that allow the default sh shell to run with SUID privileges.
+![Screenshot_2](https://user-images.githubusercontent.com/47869173/220662365-ff298f81-c187-4c5f-affa-50ec0bbd5fce.png)
 
-This example creates a local SUID copy of the binary and runs it to maintain elevated privileges. To interact with an existing SUID binary skip the first command and run the program using its original path.
-
-sudo install -m =xs $(which cpulimit) .
-
-./cpulimit -l 100 -f -- /bin/sh -p"
 
 We can use this to get root access, so lets get to it
 ```
