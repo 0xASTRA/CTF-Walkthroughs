@@ -15,7 +15,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 9.74 seconds
 ```
--> Didnt find much, so I try to login to the ftp using anonymous
+-> Didn't find much, so I try to login to the ftp using anonymous
 ```
 ┌──(root㉿kali)-[/home/astra]
 └─# ftp 192.168.189.130
