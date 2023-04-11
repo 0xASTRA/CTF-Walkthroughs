@@ -18,6 +18,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 16.68 seconds
 ```
 // We found an ssh, http and mysql port, I will search the web first
+
 // Simply going to the website we can see it uses wordpress, so I will use wpscan to see if I find something interesting
 
 // Nothing, so I will try and crack my way into the sql database using msfconsole to bruteforce it
